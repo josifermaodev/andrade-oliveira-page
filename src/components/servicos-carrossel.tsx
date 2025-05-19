@@ -1,6 +1,6 @@
 // components/ServiceCarousel.tsx
 "use client";
-import { ChevronLeft, ChevronRight, Clock, MoveRightIcon } from "lucide-react";
+import { ChevronLeft, ChevronRight, MoveRightIcon } from "lucide-react";
 import { services } from "../lib/service";
 import useEmblaCarousel from 'embla-carousel-react'
 import Link from "next/link";
