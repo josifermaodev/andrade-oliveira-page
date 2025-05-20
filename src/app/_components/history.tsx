@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { TrendingUp, Zap } from 'lucide-react';
 import { Button } from '../../components/ui/button';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function Historia() {
     const [isVisible, setIsVisible] = useState(false);
@@ -25,7 +24,7 @@ export default function Historia() {
                         <div className="relative">
                             <div className="absolute inset-0 bg-[#E6B902] translate-x-3 translate-y-3 rounded-lg"></div>
                             <div className="relative overflow-hidden rounded-lg shadow-xl bg-white">
-                                <Image 
+                                <img 
                                     src="/engenheiro2.jpg" 
                                     alt="Engenheiro civil em ação" 
                                     className="w-full md:h-160 object-cover transform hover:scale-105 transition-transform duration-700"

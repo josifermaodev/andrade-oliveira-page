@@ -4,11 +4,11 @@ import { services } from "../../../lib/service";
 import Link from "next/link";
 import { ArrowLeft, FileText } from "lucide-react";
 
-interface Props {
-  params: {
-    slug: string;
-  };
-}
+// Modificando a definição de Props para ser compatível com o PageProps do Next.js
+type Props = {
+  params: { slug: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
 
 export default function ServicePage({ params }: Props) {
   const service = services.find(
@@ -31,6 +31,8 @@ export default function ServicePage({ params }: Props) {
           src={service.image} 
           alt={service.title}
           className="absolute top-0 left-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
         />
         
         {/* Overlay escuro */}
@@ -84,8 +86,6 @@ export default function ServicePage({ params }: Props) {
             </div>
           </div>
 
-          
-
           {/* Sidebar */}
           <div className="md:w-1/3">
             {/* Card de destaque */}
@@ -117,6 +117,8 @@ export default function ServicePage({ params }: Props) {
                           <Image
                             src={item.image}
                             alt={item.title}
+                            width={64}
+                            height={64}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                           />
                         </div>
