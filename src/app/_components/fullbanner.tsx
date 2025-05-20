@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "../../components/ui/button";
 
 export default function FullBanner() {
@@ -20,7 +21,7 @@ export default function FullBanner() {
         <div className="absolute inset-0 flex items-center justify-center bg-black/60 text-white text-center p-4">
                 <div className="flex flex-col items-center gap-4">
                     <div className="flex flex-col items-center gap-2">
-                        <img src="/icone-branco.svg" alt="icone da logo" className="w-40"/>
+                        <Image src="/icone-branco.svg" alt="icone da logo" className="w-40"/>
                         <h1 className="text-4xl md:text-6xl font-bold">Andrade Oliveira</h1>  
                     </div>
                     

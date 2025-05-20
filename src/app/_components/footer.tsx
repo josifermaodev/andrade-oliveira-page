@@ -4,6 +4,7 @@ import { InstagramLogoIcon, LinkedinLogoIcon, WhatsappLogoIcon } from '@phosphor
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import BackToTop from './topo';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,7 +21,7 @@ export default function Footer() {
               Sobre Nós
             </h3>
             <div className="mb-4">
-              <img 
+              <Image
                 src="/logo-clara-png.svg" 
                 alt="Logo da Empresa" 
                 className="h-40 mb-4"
