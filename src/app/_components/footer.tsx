@@ -51,32 +51,32 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-gray-300">
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/services/sondagem-spt" className="flex items-center">
                   <span className="mr-2">›</span> Sondagem SPT
                 </a>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/services/projetos-estruturais" className="flex items-center">
                   <span className="mr-2">›</span> Projetos Estruturais
                 </a>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/services/projetos-arquitetonicos" className="flex items-center">
                   <span className="mr-2">›</span> Projetos Arquitetônicos
                 </a>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/services/projetos-eletricos" className="flex items-center">
                   <span className="mr-2">›</span> Projetos Elétricos
                 </a>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
-                  <span className="mr-2">›</span> Projetos Hidrossanitários
+                <a href="/services/projetos-combate-incendio" className="flex items-center">
+                  <span className="mr-2">›</span> Projetos de Combate a Incêndio
                 </a>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/services/regularizacao-imoveis" className="flex items-center">
                   <span className="mr-2">›</span> Regularização de Imóveis
                 </a>
               </li>
@@ -90,28 +90,28 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-gray-300">
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/" className="flex items-center">
                   <span className="mr-2">›</span> Início
                 </a>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/about" className="flex items-center">
                   <span className="mr-2">›</span> Sobre Nós
                 </a>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/services" className="flex items-center">
                   <span className="mr-2">›</span> Serviços
                 </a>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/projects" className="flex items-center">
                   <span className="mr-2">›</span> Projetos
                 </a>
               </li>
               
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="#" className="flex items-center">
+                <a href="/contacts" className="flex items-center">
                   <span className="mr-2">›</span> Contato
                 </a>
               </li>
@@ -126,15 +126,15 @@ export default function Footer() {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-[#E6B902] mt-1 mr-3 flex-shrink-0" />
-                <span>Av. Paulista, 1000, São Paulo - SP, 01310-100</span>
+                <span>Grande Vitória - ES</span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-[#E6B902] mr-3 flex-shrink-0" />
-                <span>(11) 9999-9999</span>
+                <span>(27) 99285-6966</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-[#E6B902] mr-3 flex-shrink-0" />
-                <span>contato@empresa.com.br</span>
+                <span>andrade.oliveira.eng@hotmail.com</span>
               </li>
               <li className="flex items-start">
                 <Clock className="h-5 w-5 text-[#E6B902] mt-1 mr-3 flex-shrink-0" />
