@@ -9,18 +9,18 @@ export default function Historia() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // Simula o efeito de fade-in quando o componente é montado
+        
         setIsVisible(true);
     }, []);
 
     return (
         <section className="py-10 bg-gradient-to-b from-white to-gray-50">
             <div className="container mx-auto px-4 md:px-8 lg:px-12">
-                {/* Container principal com fade-in animation */}
+                
                 <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-                    {/* Grid layout para melhor responsividade */}
+                    
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        {/* Coluna da imagem com borda e sombra */}
+                        
                         <div className="relative">
                             <div className="absolute inset-0 bg-[#E6B902] translate-x-3 translate-y-3 rounded-lg"></div>
                             <div className="relative overflow-hidden rounded-lg shadow-xl bg-white">
@@ -32,7 +32,7 @@ export default function Historia() {
                             </div>
                         </div>
 
-                        {/* Coluna do texto com melhor tipografia e espaçamento */}
+                        
                         <div className="space-y-6">
                             <div className="inline-block">
                                 <p className="text-lg font-medium text-gray-700 relative px-2">

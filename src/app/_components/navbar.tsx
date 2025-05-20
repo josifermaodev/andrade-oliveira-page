@@ -2,18 +2,18 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import NavItem, { NavItemsInterface } from "./navItem";
 import { Button } from "../../components/ui/button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "../../components/ui/sheet";
+import { X } from "lucide-react";
 
 export default function Navbar() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const pathname = usePathname();
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
-
-    const items: NavItemsInterface[] = [
+    const items = [
         { url: "/", label: "Home" },
         { url: "/about", label: "Sobre" },
         { url: "/services", label: "Serviços" },
@@ -21,73 +21,139 @@ export default function Navbar() {
         { url: "/contacts", label: "Contato" }
     ];
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setIsVisible(false);
+            } else {
+                setIsVisible(true);
+            }
+            
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [lastScrollY]);
+
     return (
-        <header className="bg-[#0f0f0f] relative">
-            <nav className="container mx-auto flex items-center justify-between py-6 gap-4 px-4 md:px-6">
-                {/* Logo */}
-                <Link href="/" className="z-10">
-                    <Image src="logo-branca-site.svg" width={150} height={150} alt="Logo do site" className="w-auto h-10 md:h-12"/>
-                </Link>
-
-                {/* Desktop Navigation */}
-                <ul className="hidden lg:flex items-center">
-                    {items.map((item, index) => (
-                        <NavItem key={index} url={item.url} label={item.label} />
-                    ))}
-                </ul>
-
-                {/* Desktop CTA Button */}
-                <div className="hidden lg:block">
-                    <Link href="/contacts">
-                        <Button className="bg-[#E6B902] hover:bg-[#c99e00] text-white">Orçamentos</Button>
-                    </Link>
-                </div>
-
-                {/* Mobile Actions Wrapper */}
-                <div className="flex items-center gap-4 lg:hidden ">
-                    {/* Mobile CTA Button */}
-                    <Link href="/contacts">
-                        <Button className="bg-[#E6B902] hover:bg-[#c99e00] text-white text-sm py-2 px-4 h-auto ">Orçamentos</Button>
-                    </Link>
+        <>
+            
+            <div className="h-24"></div>
+            
+            
+            <header className={`h-24 flex fixed  top-0 w-full bg-[#0f0f0f] z-50 transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+                <nav className="container mx-auto flex items-center justify-between py-3 px-4 md:px-6">
                     
-                    {/* Mobile Menu Button */}
-                    <button 
-                        className="text-white focus:outline-none z-10"
-                        onClick={toggleMenu}
-                        aria-label="Toggle Menu"
-                    >
-                        {isMenuOpen ? (
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        ) : (
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                            </svg>
-                        )}
-                    </button>
-                </div>
+                    <Link href="/" className="z-50">
+                        <Image 
+                            src="/logo-branca-site.svg" 
+                            width={150} 
+                            height={150} 
+                            alt="Logo" 
+                            className="w-auto h-10 md:h-12"
+                            priority
+                        />
+                    </Link>
 
-                {/* Mobile Menu */}
-                {isMenuOpen && (
-                    <div className="md:hidden fixed inset-0 bg-[#0f0f0f] z-9">
-                        <div className="flex flex-col items-center justify-center h-full">
-                            <ul className="flex flex-col items-center space-y-6">
-                                {items.map((item, index) => (
-                                    <li key={index} className="text-white text-xl font-medium">
-                                        <Link href={item.url} onClick={toggleMenu}>
-                                            {item.label}
-                                        </Link>
-                                    </li>
-                                ))}
-                                <Link href="/contacts">
-                                    <Button className="bg-[#E6B902] hover:bg-[#c99e00] text-white text-sm py-2 px-4 h-auto ">Orçamentos</Button>
+                    
+                    <ul className="hidden lg:flex items-center gap-8">
+                        {items.map((item) => (
+                            <li key={item.url} className="relative group">
+                                <Link 
+                                    href={item.url} 
+                                    className={`relative px-2 py-6 text-white/90 hover:text-[#E6B902] transition-colors ${pathname === item.url ? 'text-[#E6B902]' : ''}`}
+                                >
+                                    {item.label}
+                                    <span className={`absolute bottom-4 left-0 right-0 h-0.5 bg-[#E6B902] transition-all ${pathname === item.url ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`}></span>
                                 </Link>
-                            </ul>
-                        </div>
+                            </li>
+                        ))}
+                    </ul>
+
+                    
+                    <div className="hidden lg:block">
+                        <Link href="/contacts">
+                            <Button className="bg-[#E6B902] hover:bg-[#c99e00] text-black font-medium px-6 py-2 rounded-sm">
+                                Orçamentos
+                            </Button>
+                        </Link>
+                        
                     </div>
-                )}
-            </nav>
-        </header>
+
+                    
+                    <div className="lg:hidden flex items-center gap-4">
+                        
+                        <Link href="/contacts" className="z-50">
+                            <Button className="bg-[#E6B902] hover:bg-[#c99e00] text-black text-sm py-2 px-4 h-auto">
+                                Orçamentos
+                            </Button>
+                        </Link>
+                        
+                        <Sheet>
+                            <SheetTrigger asChild>
+                                <button 
+                                    className="text-white focus:outline-none z-50"
+                                    aria-label="Menu"
+                                >
+                                    <div className="w-8 h-8 flex flex-col justify-center items-center">
+                                        <span className="block w-6 h-0.5 bg-white -translate-y-1"></span>
+                                        <span className="block w-6 h-0.5 bg-white mt-1"></span>
+                                        <span className="block w-6 h-0.5 bg-white mt-1 translate-y-1"></span>
+                                    </div>
+                                </button>
+                            </SheetTrigger>
+
+                            <SheetContent side="right" className="bg-[#0f0f0f] border-none w-full max-w-xs p-0">
+                                <div className="h-full flex flex-col">
+                                    
+                                    <div className="flex justify-between items-center p-6 border-b border-gray-800">
+                                        
+                                        <SheetClose className="text-white rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none">
+                                            <X className="h-6 w-6" />
+                                            <span className="sr-only">Fechar</span>
+                                        </SheetClose>
+                                    </div>
+
+                                    
+                                    <div className="flex-1 overflow-y-auto p-6">
+                                        <ul className="space-y-6">
+                                            {items.map((item) => (
+                                                <li key={item.url} className="w-full">
+                                                    <SheetClose asChild>
+                                                        <Link 
+                                                            href={item.url} 
+                                                            className={`flex items-center py-3 text-lg font-medium ${pathname === item.url ? 'text-[#E6B902]' : 'text-white hover:text-[#E6B902]'}`}
+                                                        >
+                                                            {item.label}
+                                                            {pathname === item.url && (
+                                                                <span className="ml-2 w-2 h-2 rounded-full bg-[#E6B902]"></span>
+                                                            )}
+                                                        </Link>
+                                                    </SheetClose>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    
+                                    <div className="p-6 border-t border-gray-800">
+                                        <SheetClose asChild>
+                                            <Link href="/contacts" className="w-full">
+                                                <Button className="w-full bg-[#E6B902] hover:bg-[#c99e00] text-black font-medium py-3">
+                                                    Orçamentos
+                                                </Button>
+                                            </Link>
+                                        </SheetClose>
+                                    </div>
+                                </div>
+                            </SheetContent>
+                        </Sheet>
+                    </div>
+                </nav>
+            </header>
+        </>
     );
 }

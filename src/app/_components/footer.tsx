@@ -9,12 +9,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-[#1d1d1d] text-white">
-      {/* Parte superior do footer */}
+    <footer className="bg-[#0f0f0f] text-white border-t border-[#E6B902]">
+      
       <div className="container w-full mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
-          {/* Coluna 1 - Sobre */}
+          
           <div>
             <h3 className="text-[#E6B902] font-bold text-xl mb-4 border-l-4 border-[#E6B902] pl-3">
               Sobre Nós
@@ -45,7 +45,7 @@ export default function Footer() {
             </div>
           </div>
           
-          {/* Coluna 2 - Serviços */}
+          
           <div>
             <h3 className="text-[#E6B902] font-bold text-xl mb-4 border-l-4 border-[#E6B902] pl-3">
               Nossos Serviços
@@ -84,7 +84,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          {/* Coluna 3 - Links Úteis */}
+          
           <div>
             <h3 className="text-[#E6B902] font-bold text-xl mb-4 border-l-4 border-[#E6B902] pl-3">
               Links Úteis
@@ -119,7 +119,7 @@ export default function Footer() {
             </ul>
           </div>
           
-          {/* Coluna 4 - Contato */}
+          
           <div>
             <h3 className="text-[#E6B902] font-bold text-xl mb-4 border-l-4 border-[#E6B902] pl-3">
               Contato
@@ -151,7 +151,7 @@ export default function Footer() {
         </div>
       </div>
       
-      {/* Parte inferior do footer */}
+      
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center max-w-6xl">
             <div className='text-center md:text-left'>

@@ -28,7 +28,7 @@ export const ServiceCarousel = () => {
             </div>
 
             <div className="relative">
-            {/* Carrossel */}
+            
                 <div ref={emblaRef} className="overflow-hidden">
                     <div className="flex">
                     {services.map((item) => (
@@ -70,7 +70,7 @@ export const ServiceCarousel = () => {
                     </div>
                 </div>
 
-                {/* Botões */}
+                
                 <button
                     onClick={scrollPrev}
                     className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white text-gray-600 rounded-full shadow-lg w-10 h-10 flex items-center justify-center"
