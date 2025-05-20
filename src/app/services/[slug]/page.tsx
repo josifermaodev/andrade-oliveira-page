@@ -27,7 +27,7 @@ export default function ServicePage({ params }: Props) {
       {/* Hero Section com imagem de fundo */}
       <div className="relative w-full h-64 md:h-96">
         {/* Tag img padrão para evitar problemas com o Next Image */}
-        <img 
+        <Image 
           src={service.image} 
           alt={service.title}
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -114,7 +114,7 @@ export default function ServicePage({ params }: Props) {
                       <div className="flex gap-3">
                         <div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden">
                           {/* Usando tag img padrão para as miniaturas também */}
-                          <img
+                          <Image
                             src={item.image}
                             alt={item.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform"
