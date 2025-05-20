@@ -3,6 +3,7 @@
 import { InstagramLogoIcon, LinkedinLogoIcon, WhatsappLogoIcon } from '@phosphor-icons/react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import BackToTop from './topo';
+import Link from 'next/link';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -32,15 +33,15 @@ export default function Footer() {
             </p>
             <div className="flex space-x-3 mt-6">
               
-                <a href="https://www.instagram.com/andrade.oliveira.engenharia/" target='_blank' className="bg-white/10 hover:bg-[#E6B902] p-2 rounded-full transition-colors duration-300">
+                <Link href="https://www.instagram.com/andrade.oliveira.engenharia/" target='_blank' className="bg-white/10 hover:bg-[#E6B902] p-2 rounded-full transition-colors duration-300">
                     <InstagramLogoIcon size={25} />
-                </a>
-                <a href="https://www.linkedin.com/in/f%C3%A1bio-oliveira-02b58368/" target='_blank' className="bg-white/10 hover:bg-[#E6B902] p-2 rounded-full transition-colors duration-300">
+                </Link>
+                <Link href="https://www.linkedin.com/in/f%C3%A1bio-oliveira-02b58368/" target='_blank' className="bg-white/10 hover:bg-[#E6B902] p-2 rounded-full transition-colors duration-300">
                     <LinkedinLogoIcon size={25} />
-                </a>
-                <a href="https://api.whatsapp.com/send/?phone=5527992856966&text=Gostaria+de+fazer+um+or%C3%A7amento%21&type=phone_number&app_absent=0" target='_blank' className="bg-white/10 hover:bg-[#E6B902] p-2 rounded-full transition-colors duration-300">
+                </Link>
+                <Link href="https://api.whatsapp.com/send/?phone=5527992856966&text=Gostaria+de+fazer+um+or%C3%A7amento%21&type=phone_number&app_absent=0" target='_blank' className="bg-white/10 hover:bg-[#E6B902] p-2 rounded-full transition-colors duration-300">
                     <WhatsappLogoIcon size={25} />
-                </a>
+                </Link>
             </div>
           </div>
           
@@ -51,34 +52,34 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-gray-300">
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/services/sondagem-spt" className="flex items-center">
+                <Link href="/services/sondagem-spt" className="flex items-center">
                   <span className="mr-2">›</span> Sondagem SPT
-                </a>
+                </Link>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/services/projetos-estruturais" className="flex items-center">
+                <Link href="/services/projetos-estruturais" className="flex items-center">
                   <span className="mr-2">›</span> Projetos Estruturais
-                </a>
+                </Link>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/services/projetos-arquitetonicos" className="flex items-center">
+                <Link href="/services/projetos-arquitetonicos" className="flex items-center">
                   <span className="mr-2">›</span> Projetos Arquitetônicos
-                </a>
+                </Link>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/services/projetos-eletricos" className="flex items-center">
+                <Link href="/services/projetos-eletricos" className="flex items-center">
                   <span className="mr-2">›</span> Projetos Elétricos
-                </a>
+                </Link>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/services/projetos-combate-incendio" className="flex items-center">
+                <Link href="/services/projetos-combate-incendio" className="flex items-center">
                   <span className="mr-2">›</span> Projetos de Combate a Incêndio
-                </a>
+                </Link>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/services/regularizacao-imoveis" className="flex items-center">
+                <Link href="/services/regularizacao-imoveis" className="flex items-center">
                   <span className="mr-2">›</span> Regularização de Imóveis
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -90,30 +91,30 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-gray-300">
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/" className="flex items-center">
+                <Link href="/" className="flex items-center">
                   <span className="mr-2">›</span> Início
-                </a>
+                </Link>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/about" className="flex items-center">
+                <Link href="/about" className="flex items-center">
                   <span className="mr-2">›</span> Sobre Nós
-                </a>
+                </Link>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/services" className="flex items-center">
+                <Link href="/services" className="flex items-center">
                   <span className="mr-2">›</span> Serviços
-                </a>
+                </Link>
               </li>
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/projects" className="flex items-center">
+                <Link href="/projects" className="flex items-center">
                   <span className="mr-2">›</span> Projetos
-                </a>
+                </Link>
               </li>
               
               <li className="hover:text-[#E6B902] transition-colors">
-                <a href="/contacts" className="flex items-center">
+                <Link href="/contacts" className="flex items-center">
                   <span className="mr-2">›</span> Contato
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -161,15 +162,15 @@ export default function Footer() {
             </div>
           
           <div className="flex flex-wrap justify-center">
-            <a href="#" className="text-gray-400 hover:text-[#E6B902] text-sm mx-2 transition-colors">
+            <Link href="#" className="text-gray-400 hover:text-[#E6B902] text-sm mx-2 transition-colors">
               Termos de Uso
-            </a>
-            <a href="#" className="text-gray-400 hover:text-[#E6B902] text-sm mx-2 transition-colors">
+            </Link>
+            <Link href="#" className="text-gray-400 hover:text-[#E6B902] text-sm mx-2 transition-colors">
               Política de Privacidade
-            </a>
-            <a href="#" className="text-gray-400 hover:text-[#E6B902] text-sm mx-2 transition-colors">
+            </Link>
+            <Link href="#" className="text-gray-400 hover:text-[#E6B902] text-sm mx-2 transition-colors">
               Política de Cookies
-            </a>
+            </Link>
           </div>
         </div>
         <BackToTop />
