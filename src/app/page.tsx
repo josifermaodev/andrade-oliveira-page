@@ -1,17 +1,17 @@
-import Categories from "../components/categories";
-import Faq from "../components/faq";
-import Fullbanner from "../components/fullbanner";
-import Historia from "../components/history";
-import { ServiceCarousel } from "../components/servicos-carrossel";
+import Categories from "./_components/categories";
+import Faq from "./_components/faq";
+import Fullbanner from "./_components/fullbanner";
+import Historia from "./_components/history";
+import { ServiceCarousel } from "./_components/servicos-carrossel";
 
 export default function Home() {
   return (
-    <div>
+    <main>
       <Fullbanner />
       <Categories />
       <Historia />
       <ServiceCarousel />
       <Faq />
-    </div>
+    </main>
   );
 }

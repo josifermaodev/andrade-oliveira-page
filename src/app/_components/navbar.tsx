@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import NavItem, { NavItemsInterface } from "./navItem";
-import { Button } from "./ui/button";
+import { Button } from "../../components/ui/button";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -15,10 +15,10 @@ export default function Navbar() {
 
     const items: NavItemsInterface[] = [
         { url: "/", label: "Home" },
-        { url: "/services", label: "Serviços" },
         { url: "/about", label: "Sobre" },
-        { url: "/contacts", label: "Contato" },
-        { url: "/projects", label: "Projetos" }
+        { url: "/services", label: "Serviços" },
+        { url: "/projects", label: "Projetos" },
+        { url: "/contacts", label: "Contato" }
     ];
 
     return (

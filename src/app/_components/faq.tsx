@@ -63,11 +63,11 @@ export default function Faq() {
   return (
     <section className="flex justify-center bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-            <div className="text-start mb-12">
-                    <h2 className="text-4xl font-bold mb-4 text-[#E6B902] inline-block">
+            <div className="flex flex-col items-start mb-12">
+                    <h2 className="text-4xl font-bold mb-4 text-[#E6B902] bg-[#0f0f0f] p-4 w-auto">
                         Perguntas Frequentes
                     </h2>
-                    <p className="text-gray-600 mx-auto">
+                    <p className="text-gray-600">
                         Encontre respostas para as dúvidas mais comuns sobre nossos serviços de engenharia e consultoria
                     </p>
                 </div>
