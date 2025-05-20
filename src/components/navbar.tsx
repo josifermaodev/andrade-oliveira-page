@@ -17,7 +17,8 @@ export default function Navbar() {
         { url: "/", label: "Home" },
         { url: "/services", label: "Serviços" },
         { url: "/about", label: "Sobre" },
-        { url: "/contacts", label: "Contato" }
+        { url: "/contacts", label: "Contato" },
+        { url: "/projects", label: "Projetos" }
     ];
 
     return (

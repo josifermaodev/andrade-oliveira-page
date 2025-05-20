@@ -2,7 +2,7 @@
 
 export default function Categories() {
     return (
-        <section className="container mx-auto flex flex-col items-center justify-center gap-4 py-10 px-4 md:px-6">
+        <section className="container mx-auto flex flex-col items-center justify-center gap-4 pt-10 px-4 md:px-6">
             <h1 className="text-2xl font-bold text-center text-[#E6B902]">Por que nos escolher?</h1>
             <div className="flex flex-col lg:flex-row items-center justify-center gap-4 p-4 ">
                 <div className="flex items-center justify-center gap-4 p-4">

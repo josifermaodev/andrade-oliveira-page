@@ -14,7 +14,7 @@ export default function Historia() {
     }, []);
 
     return (
-        <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <section className="py-10 bg-gradient-to-b from-white to-gray-50">
             <div className="container mx-auto px-4 md:px-8 lg:px-12">
                 {/* Container principal com fade-in animation */}
                 <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
