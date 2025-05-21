@@ -1,6 +1,6 @@
 import ContactForm from "../_components/contact-form";
 import { FiMail, FiPhone, FiMapPin, FiClock } from "react-icons/fi";
-import { FaLinkedin, FaInstagram, FaTwitter, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function Contatos() {
   return (
