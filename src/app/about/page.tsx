@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Historia from "../_components/history";
-import Categories from "../_components/categories";
+import FullImage from "../_components/full-image";
+import Cta from "../_components/cta";
+import FeaturesSection from "../_components/features-section";
 
 export const metadata: Metadata = {
   title: "Andrade Oliveira | Sobre",
@@ -10,10 +12,18 @@ export const metadata: Metadata = {
 
 export default function Sobre(){
     return (
-        <main>
+        <main className="flex flex-col justify-center items-center w-full">
             <div>
                 <Historia />
-                <Categories />
+            </div>
+            <div className="flex justify-center w-full">
+                <FullImage />
+            </div>
+            <div className="mt-20">
+                <FeaturesSection/>
+            </div>
+            <div className="mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <Cta />
             </div>
         </main>
     )

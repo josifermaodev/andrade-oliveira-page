@@ -18,7 +18,7 @@ export default function Servicos() {
           <div className="w-24 h-1 bg-[#E6B902] mx-auto"></div>
         </div>
 
-        {/* Lista de serviços em layout alternativo */}
+        
         <div className="space-y-24">
           {services.map((item, index) => (
             <div 
@@ -37,7 +37,7 @@ export default function Servicos() {
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30"></div>
                 </div>
 
-                {/* Conteúdo */}
+                
                 <div className={`md:w-1/2 p-8 md:p-12 flex flex-col justify-center ${index % 2 === 0 ? 'text-white' : 'text-[#0f0f0f]'}`}>
                   <span className="text-sm font-medium text-[#E6B902] mb-2">
                     0{index + 1}
@@ -58,7 +58,7 @@ export default function Servicos() {
           ))}
         </div>
 
-        {/* Rodapé da seção */}
+        
         <div className="mt-24 text-center">
           <p className="text-lg text-[#0f0f0f] mb-6">
             Precisa de algo diferente? Fale conosco sobre seu projeto.

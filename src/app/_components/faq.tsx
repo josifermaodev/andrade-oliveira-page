@@ -61,10 +61,10 @@ export default function Faq() {
   };
 
   return (
-    <section className="flex justify-center bg-gray-50 py-16">
+    <section className="flex justify-center bg-[#fafafa] py-20">
         <div className="container mx-auto px-4">
             <div className="flex flex-col items-start mb-12">
-                    <h2 className="text-4xl font-bold mb-4 text-[#E6B902] bg-[#0f0f0f] p-4 w-auto">
+                    <h2 className="text-4xl rounded-sm font-bold mb-4 text-[#E6B902] w-auto">
                         Perguntas Frequentes
                     </h2>
                     <p className="text-gray-600">
@@ -76,7 +76,7 @@ export default function Faq() {
             {faqData.map((item, index) => (
                 <div 
                 key={index} 
-                className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border-l-4 border-transparent hover:border-l-4 hover:border-[#E6B902]"
+                className="bg-white rounded-sm shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border-l-4 border-transparent hover:border-l-4 hover:border-[#E6B902]"
                 >
                 <button
                     onClick={() => toggle(index)}
@@ -104,8 +104,8 @@ export default function Faq() {
             </div>
 
             <div className="text-center mt-12">
-                <p className="text-gray-600 mb-4">Ainda tem dúvidas? Entre em contato conosco</p>
-                <Link href='https://api.whatsapp.com/send/?phone=5527992856966&text=Gostaria+de+fazer+um+or%C3%A7amento%21&type=phone_number&app_absent=0' target='_blank' className="bg-[#E6B902] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#c49e02] transition-colors shadow-md hover:shadow-lg">
+                <p className="text-gray-600 mb-8">Ainda tem dúvidas? Entre em contato conosco</p>
+                <Link href='https://api.whatsapp.com/send/?phone=5527992856966&text=Gostaria+de+fazer+um+or%C3%A7amento%21&type=phone_number&app_absent=0' target='_blank' className="bg-[#E6B902] text-[#0f0f0f] px-6 py-3 rounded-sm font-medium hover:bg-[#c49e02] transition-colors shadow-md hover:shadow-lg">
                     <WhatsappLogoIcon className="inline-block mr-2" size={20} />
                     Fale Conosco
                 </Link>

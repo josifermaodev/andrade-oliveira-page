@@ -76,7 +76,7 @@ export default function Navbar() {
                     
                     <div className="hidden lg:block">
                         <Link href="/contacts">
-                            <Button className="bg-[#E6B902] hover:bg-[#c99e00] text-black font-medium px-6 py-2 rounded-sm">
+                            <Button className="bg-[#E6B902] hover:bg-[#fafafa] text-black font-medium px-6 py-2 rounded-sm">
                                 Orçamentos
                             </Button>
                         </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
                     <div className="lg:hidden flex items-center gap-4">
                         
                         <Link href="/contacts" className="z-50">
-                            <Button className="bg-[#E6B902] hover:bg-[#c99e00] text-black text-sm py-2 px-4 h-auto">
+                            <Button className="bg-[#E6B902] hover:bg-[#fafafa] text-black text-sm py-2 px-4 h-auto rounded-sm">
                                 Orçamentos
                             </Button>
                         </Link>
@@ -142,7 +142,7 @@ export default function Navbar() {
                                     <div className="p-6 border-t border-gray-800">
                                         <SheetClose asChild>
                                             <Link href="/contacts" className="w-full">
-                                                <Button className="w-full bg-[#E6B902] hover:bg-[#c99e00] text-black font-medium py-3">
+                                                <Button className="w-full bg-[#E6B902] hover:bg-[#fafafa] text-black font-medium py-3 rounded-sm">
                                                     Orçamentos
                                                 </Button>
                                             </Link>
